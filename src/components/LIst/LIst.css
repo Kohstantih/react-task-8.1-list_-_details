@@ -1,0 +1,37 @@
+.users_list {
+    width: 35%;
+    border: 1px solid black;
+
+    align-self: flex-start;
+}
+
+.users_item {
+    height: 30px;
+}
+
+.btn_user_check {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(255, 250, 250);
+
+    border: none;
+
+    cursor: pointer;
+}
+
+.btn_user_check:hover {
+    background-color: rgb(198, 198, 198);
+}
+
+.btn_user_check:active {
+    background-color: rgb(255, 250, 250);
+}
+
+.active_btn {
+    background-color: rgb(120, 165, 255);
+}
+
+.active_btn:hover {
+    background-color: rgb(120, 165, 255);
+}

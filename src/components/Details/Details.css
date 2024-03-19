@@ -1,0 +1,18 @@
+.details_box{
+    width: 60%;
+
+    text-align: left;
+    font-weight: bold;
+
+    border: 1px solid #b8b5b5;
+    border-bottom: none;
+}
+
+.avatar {
+    width: 100%;
+}
+
+.details_item {
+    border-bottom: 1px solid #b8b5b5;
+    padding: 10px;
+}
