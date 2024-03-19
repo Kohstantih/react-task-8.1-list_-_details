@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import getUserDetails from '../../funcs/getUserDetails';
-import './Details.css'
 import { TDetails } from '../../types/TDetails';
+import './Details.css';
 
 export default function Details({ id }: { id: number }) {
     const [objDet, setObjDet] = useState<TDetails | null>(null);
@@ -9,12 +9,9 @@ export default function Details({ id }: { id: number }) {
     useEffect(() => {
         getUserDetails(import.meta.env.VITE_APP_DETAILS, id)
             .then((response) => response.json())
-            .then((data) => {
-                console.log(data);
-                setObjDet(data);
-            });
+            .then((data) => setObjDet(data));
     }, [id])
-    
+
     if (!objDet) return;
 
     return (

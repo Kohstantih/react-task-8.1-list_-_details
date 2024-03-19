@@ -3,6 +3,6 @@ import { TListItem } from "./TListItem"
 
 export type TListProps = {
     list: TListItem[],
-    activeId: number,
+    activeId: number | null,
     onClick: ClickButtonType
 } 

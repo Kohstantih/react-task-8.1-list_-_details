@@ -1,19 +1,16 @@
+import { useEffect, useState } from 'react';
 import List from './components/LIst/List';
 import Details from './components/Details/Details';
-import { useEffect, useState } from 'react';
 import getUsersList from './funcs/getUsersList';
 import { TListItem } from './types/TListItem';
+import { ClickButtonType } from './types/ClickButtonType';
 import './App.css';
 
 function App() {
   const [list, setList] = useState<TListItem[]>([]); 
-  const [idDet, setidDet] = useState(-1);
+  const [idDet, setidDet] = useState(null);
 
-  type HTMLElementEvent<T extends HTMLElement> = React.MouseEvent & {
-    target: T;
-  }
-
-  const showDetails = (e: HTMLElementEvent<HTMLButtonElement>) => {
+  const showDetails: ClickButtonType = (e) => {
     const { id } = e.target.dataset;
     if (!id) return;
 

@@ -1,1 +1,4 @@
-export type ClickButtonType = (e: React.MouseEvent<HTMLButtonElement>) => void;
+type HTMLElementEvent<T extends HTMLElement> = React.MouseEvent & {
+    target: T;
+  }
+export type ClickButtonType = (e: HTMLElementEvent<HTMLButtonElement>) => void;
